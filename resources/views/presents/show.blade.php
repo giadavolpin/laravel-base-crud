@@ -23,11 +23,7 @@ $image_carbon = config('imagePresents.carbon_image');
                         @endif
                     </div>
                     <a href="{{route('presents.edit', $present->id)}}">Modifica</a>
-                    <form action="{{route('presents.destroy', $present->id)}}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit">Elimina</button>
-                    </form>
+                    <button class="delete bg-danger myBtn"><i class="fa-solid fa-trash"></i></button>
                 </div>
                 <div class="details">
                     <div class="s-box">
@@ -57,6 +53,17 @@ $image_carbon = config('imagePresents.carbon_image');
                         <div class="timbro">
                             <img src="{{Vite::asset('/resources/img/timbro.PNG')}}" alt="">
                         </div>
+                    </div>
+                </div>
+                <div class="modal myModal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <form action="{{route('presents.destroy', $present->id)}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <span>Sei sicuro di elimiare il regalo per {{$present->name}}?</span> 
+                            <button  type="submit">Si</button>
+                        </form>
                     </div>
                 </div>
             </div>
