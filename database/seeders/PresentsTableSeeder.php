@@ -22,7 +22,11 @@ class PresentsTableSeeder extends Seeder
             $newPresent->surname = $faker->lastName();
             $newPresent->present = $faker->word(1);
             $newPresent->address = $faker->address();
-            $newPresent->good_or_evil = $faker->boolean();
+            if($faker->boolean()){
+                $newPresent->good_or_evil = 'buono';
+            }else{
+                $newPresent->good_or_evil = 'cattivo';
+            }
             $newPresent->id_elf = $faker->bothify();
             $newPresent->save();
         }

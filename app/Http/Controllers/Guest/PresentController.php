@@ -53,7 +53,7 @@ class PresentController extends Controller
      */
     public function show(Present $present)
     {
-        return view('products.show', compact('present'));
+        return view('presents.show', compact('present'));
     }
 
     /**
@@ -97,8 +97,8 @@ class PresentController extends Controller
             'name' => 'required|min:5|max:50',
             'surname' => 'required|min:5|max:50',
             'present' => 'required|max:100',
-            'address' => 'requiredmax:250',
-            'good_or_evil' => 'required|max:50',
+            'address' => 'required|max:250',
+            'good_or_evil' => 'required|max:10',
             'id_elf' => 'required|max:10',
         ], [
             'name.required' => 'Il nome è obbligatorio.',

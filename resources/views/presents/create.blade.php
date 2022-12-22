@@ -13,7 +13,7 @@
                 @enderror
             </div>
             <div>
-                <label for="surname">Surname</label>
+                <label for="surname">Cognome</label>
                 <input type="text" class="form-controll @error('surname') is-invalid @enderror" name="surname" id="surname" placeholder="Rossi" required>
                 @error('surname')
                     <div class="invalid-feedback">{{$message}}</div>
@@ -50,8 +50,11 @@
                     <div class="invalid-feedback">{{$message}}</div>
                 @enderror
             </div>
-            <button type="submit" class="my-btn text-uppercase fw-bold">Invia</button>
-            <button type="reset" class="my-btn text-uppercase fw-bold">Resetta</button>
+            <div class="d-flex">
+                <button type="submit" class="my-btn rounded-pill" id="btn-submit">Invia</button>
+                <button type="reset" class="my-btn  rounded-pill" id="btn-reset">Resetta</button>
+            </div>
+
         </form>
 
     </section>

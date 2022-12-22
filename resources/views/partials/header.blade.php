@@ -1,5 +1,6 @@
 <?php
-  $links = config('presents.navbar')
+  $links = config('presents.navbar');
+
 ?>
 
 <header class="d-flex align-items-center">
@@ -18,6 +19,3 @@
         </nav>
     </div>
 </header> 
-
-<section id="jumbo">
-</section>

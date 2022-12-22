@@ -8,12 +8,12 @@ return [
             "active"=> false,
         ],
         [
-            "text"=> "presents",
+            "text"=> "Regali",
             "url"=> "presents.index",
             "active"=> false,
         ],
         [
-            "text"=> "create",
+            "text"=> "aggiungi un regalo",
             "url"=> "presents.create",
             "active"=> false,
         ]
