@@ -17,7 +17,7 @@ return [
     'https://m.media-amazon.com/images/I/91eDWCnKXnL._AC_UL640_FMwebp_QL65_.jpg',
     ],
     'carbon_image' =>[
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.it%2FCarbone-carbone-commestibile-Sacchetti-caramellato%2Fdp%2FB09J4RYLYY&psig=AOvVaw174ARAW_jHBa9rdAIK8dpq&ust=1671829003294000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLC9qMCOjvwCFQAAAAAdAAAAABAE'
+        'https://m.media-amazon.com/images/I/51Rp-HS1+hL._AC_SX522_.jpg'
     ]
 ];
 

@@ -1,8 +1,10 @@
-<?<?php   
+<?php   
 
 $image = config('imagePresents.random_image');
 $length = count($image);
 $index = $present->id % $length;
+
+$image_carbon = config('imagePresents.carbon_image');
 ?>
 
 
@@ -14,7 +16,11 @@ $index = $present->id % $length;
                 <div class="present">
                     <h2 class="kid-name">{{$present->name}} {{$present->surname}}</h2>
                     <div class="box-img-gioco">
+                        @if ($present->good_or_evil == 'cattivo')
+                        <img src="{{$image_carbon[0]}}" alt="image present">
+                        @else
                         <img src="{{$image[$index]}}" alt="image present">
+                        @endif
                     </div>
                     <a href="{{route('presents.edit', $present->id)}}">Modifica</a>
                     <form action="{{route('presents.destroy', $present->id)}}" method="POST">
