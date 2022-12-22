@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Present extends Model
 {
     use HasFactory;
+    protected $fillable = ['name','surname','present','address', 'good_or_evil','id_elf'];
 }

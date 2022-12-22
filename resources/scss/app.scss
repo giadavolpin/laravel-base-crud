@@ -64,11 +64,11 @@ header {
         width: 200px;
     }
 
-    .img-presents:nth-last-child(2) {
+    .img-presents:nth-last-child(3) {
         opacity: 0.4;
     }
 
-    .img-presents:nth-last-child(3) {
+    .img-presents:nth-last-child(4) {
         opacity: 0.7;
     }
 
@@ -99,7 +99,7 @@ header {
         bottom: 0;
         z-index: 9999;
         padding: 15px 25px;
-        background-color: $light-green;
+        background-color: $dark-green;
         text-transform: uppercase;
         color: white;
         font-weight: bold;
@@ -107,7 +107,7 @@ header {
         transition: 0.3s all;
 
         &:hover {
-            background-color: $dark-green;
+            background-color: $light-green;
         }
     }
 
@@ -116,20 +116,63 @@ header {
 
 //footer
 footer {
+    background-color: $red-hover;
+    color: $worm-white;
 
-      background-color: $red-hover;
+    .container-footer {
+        width: 100%;
+
+        .container-image {
+            width: calc(100% - 70%);
+
+            img {
+                width: 30%;
+            }
+        }
+
+        .container-links {
+            width: calc(100% - 30%);
+        }
+    }
+
 
     ul {
         list-style: none;
-        font-weight: bold;
-
+        // font-weight: bold;
+        li{
+            position: relative;
+        }
         li:first-child{
-            font-size: 1.3rem;
             font-weight: bold;
+            font-size: 1.3rem;
             padding-bottom: 10px;
+        }
+
+        li:hover {
+            
+            cursor: pointer;
+            font-weight: bold;
+        }
+    }
+
+    .container-social {
+        display: flex;
+        justify-content: center;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    .icone i{
+        margin: 5px 0;
+        font-size: 25px;
+        
+
+        &:hover {
+            cursor: pointer;
         }
     }
 }
+
 
 // text color class
 
@@ -139,4 +182,36 @@ footer {
 
 .white {
     color: $worm-white;
+}
+
+// Form Style - Create - Fabio
+.my-form {
+    background-color: $red;
+    color: $white;
+    margin: 50px 0;
+    border-radius: 3rem;
+    padding: 3rem 10rem;
+
+    h1 {
+        color: $gold;
+    }
+
+    * {
+        font-size: 1.2rem;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .my-btn {
+        background-color: $dark-green;
+        padding: 0.5rem;
+        margin-top: 1rem;
+        color: $white;
+        border: 0;
+        transition: 0.3s all;
+
+        &:hover {
+            background-color: $light-green;
+        }
+    }
 }
