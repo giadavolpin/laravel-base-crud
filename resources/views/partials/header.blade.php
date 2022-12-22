@@ -6,7 +6,7 @@
 <header class="d-flex align-items-center">
     <div class="container p-0 d-flex align-items-center">
         <div class="logo">
-            <img src="{{Vite::asset('/resources/img/logo.jpg')}}" alt="" class="logo">
+            <img src="{{Vite::asset('/resources/img/logo-red.PNG')}}" alt="" class="logo">
         </div>
         <nav class="navbar-nav container p-0 navbar-light">
             <ul class="d-flex list-unstyled justify-content-end list-links text-uppercase fw-bold m-0">

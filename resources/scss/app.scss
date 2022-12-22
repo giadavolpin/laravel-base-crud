@@ -20,7 +20,7 @@ header {
    
     // Logo Style
     .logo {
-        width: 103px;
+        width: 100px;
     }
 
     // Links Style
@@ -42,7 +42,7 @@ header {
 
 // Jumbo Style
 #jumbo {
-    background: url('../img/jumbo.jpg') no-repeat;
+    background: url('/resources/img/jumbotron_crop.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     height: 600px;

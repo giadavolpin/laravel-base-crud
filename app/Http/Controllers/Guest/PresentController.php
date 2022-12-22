@@ -64,7 +64,7 @@ class PresentController extends Controller
      */
     public function edit(Present $present)
     {
-        return view('products.edit', compact('present'));
+        return view('presents.edit', compact('present'));
     }
 
     /**
@@ -86,9 +86,10 @@ class PresentController extends Controller
      * @param  int  $id
      * 
      */
-    public function destroy($id)
+    public function destroy(Present $present)
     {
-        //
+        $present->delete();
+        return redirect()->route('presents.index')->with('message', "Il regalo di {$present->name} è stato cancellato correttamente");
     }
 
     // Validation
@@ -97,9 +98,9 @@ class PresentController extends Controller
             'name' => 'required|min:5|max:50',
             'surname' => 'required|min:5|max:50',
             'present' => 'required|max:100',
-            'address' => 'required|max:250',
+            'address' => 'required|max:255',
             'good_or_evil' => 'required|max:10',
-            'id_elf' => 'required|max:10',
+            'id_elf' => 'max:10',
         ], [
             'name.required' => 'Il nome è obbligatorio.',
             'name.min' => 'Il nome deve essere lungo almeno :min caratteri.',
@@ -114,7 +115,6 @@ class PresentController extends Controller
             'good_or_evil.max' => 'Il comportamento del bambino non può superare i :max caratteri.',
             'id_elf.required' => 'La matricola dell\'elfo è obbligatorio.',
             'id_elf.max' => 'La matricola dell\'elfo non può superare i :max caratteri.',
-
         ])->validate();
 
         return $validator;

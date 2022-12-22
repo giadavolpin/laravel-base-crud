@@ -16,6 +16,12 @@ $index = $present->id % $length;
                     <div class="box-img-gioco">
                         <img src="{{$image[$index]}}" alt="image present">
                     </div>
+                    <a href="{{route('presents.edit', $present->id)}}">Modifica</a>
+                    <form action="{{route('presents.destroy', $present->id)}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">Elimina</button>
+                    </form>
                 </div>
                 <div class="details">
                     <div class="s-box">
@@ -34,15 +40,15 @@ $index = $present->id % $length;
                                 <span class="data">{{Str::limit($present->address, 25)}}</span>
                             </div>
                             <div class="naughty name s-d-flex separation-line">
-                                <span class="index">Buono / Cattivo:</span>
-                                <span class="data">{{$present->good_or_evil}}</span>
+                                <span class="index">Comportamento:</span>
+                                <span class="data text-capitalize">{{$present->good_or_evil}}</span>
                             </div>
                             <div class="elf name s-d-flex separation-line">
                                 <span class="index">Elfo n°:</span>
                                 <span class="data">{{$present->id_elf}}</span>
                             </div>
                         </div>
-                        <div class="timbro"></div
+                        <div class="timbro"></div>
                     </div>
                 </div>
             </div>

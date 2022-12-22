@@ -7,28 +7,28 @@
             <h1 class="text-center fs-1">Aggiungi un Regalo</h1>
             <div>
                 <label for="name">Nome</label>
-                <input type="text" class="form-controll @error('name') is-invalid @enderror" name="name" id="name" placeholder="Mario" required>
+                <input type="text" class="form-controll @error('name') is-invalid @enderror" name="name" id="name" placeholder="Mario" required minlength="5" maxlength="50">
                 @error('name')
                     <div class="invalid-feedback">{{$message}}</div>
                 @enderror
             </div>
             <div>
                 <label for="surname">Cognome</label>
-                <input type="text" class="form-controll @error('surname') is-invalid @enderror" name="surname" id="surname" placeholder="Rossi" required>
+                <input type="text" class="form-controll @error('surname') is-invalid @enderror" name="surname" id="surname" placeholder="Rossi" required minlength="5" maxlength="50">
                 @error('surname')
                     <div class="invalid-feedback">{{$message}}</div>
                 @enderror
             </div>
             <div>
                 <label for="present">Regalo</label>
-                <input type="text" class="form-controll @error('surname') is-invalid @enderror" name="present" id="present" required>
+                <input type="text" class="form-controll @error('surname') is-invalid @enderror" name="present" id="present" required maxlength="100">
                 @error('present')
                     <div class="invalid-feedback">{{$message}}</div>
                 @enderror
             </div>
             <div>
                 <label for="address">Indirizzo di Consegna</label>
-                <input type="text" class="form-controll @error('address') is-invalid @enderror" name="address" id="address" required>
+                <input type="text" class="form-controll @error('address') is-invalid @enderror" name="address" id="address" required maxlength="255">
                 @error('address')
                     <div class="invalid-feedback">{{$message}}</div>
                 @enderror
@@ -45,10 +45,7 @@
             </div>
             <div>
                 <label for="id_elf">Matricola Elfo</label>
-                <input type="text" class="form-controll @error('id_elf') is-invalid @enderror" name="id_elf" id="id_elf" required>
-                @error('id_elf')
-                    <div class="invalid-feedback">{{$message}}</div>
-                @enderror
+                <input type="text" class="form-controll" name="id_elf" id="id_elf" maxlength="10">
             </div>
             <div class="d-flex">
                 <button type="submit" class="my-btn rounded-pill" id="btn-submit">Invia</button>

@@ -3,7 +3,19 @@
 @section('content')
 @include('partials.jumbo')
     <div class="container">
-        <h1 class="color-red py-4">Regali di Natale 2022</h1>
+        <div class="d-flex">
+            <h1 class="color-red py-4">Regali di Natale 2022</h1>
+            @if(session()->has('message'))
+            <div class="alert alert-success mb-3 mt-3">
+                {{ session()->get('message') }}
+            </div>
+            @endif
+        </div>
+        <select name="" id="">
+            <option value="" selected>Tutti</option>
+            <option value="buono">Buoni</option>
+            <option value="cattivo">Cattivi</option>
+        </select>
         <div class="row">
             @foreach ($presents as $present)
             <div class="col-2">
