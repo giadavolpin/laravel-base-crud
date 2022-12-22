@@ -54,7 +54,9 @@ $image_carbon = config('imagePresents.carbon_image');
                                 <span class="data">{{$present->id_elf}}</span>
                             </div>
                         </div>
-                        <div class="timbro"></div>
+                        <div class="timbro">
+                            <img src="{{Vite::asset('/resources/img/timbro.PNG')}}" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
