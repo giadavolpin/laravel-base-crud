@@ -1,0 +1,142 @@
+@use '../scss/partials/variable' as *;
+@import '~bootstrap/scss/bootstrap';
+
+//Utilitys
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+
+// Header Style
+header {
+    height: 90px;
+
+    // Logo Style
+    .logo {
+        width: 103px;
+    }
+
+    // Links Style
+    .links a {
+        text-decoration: none;
+        color: $red;
+        font-size: 18px;
+
+        &.active,
+        &:hover {
+            color: $red-hover;
+        }
+    }
+
+    .list-links {
+        gap: 35px;
+    }
+}
+
+// Jumbo Style
+#jumbo {
+    background: url('../img/jumbo.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+}
+
+// Main Style - Home - Fabio
+.main-home {
+
+    .box-presents {
+        margin-top: 100px;
+    }
+
+    h1 {
+        color: $green;
+    }
+
+    h5 {
+        color: $red;
+    }
+
+    .img-presents {
+        width: 200px;
+    }
+
+    .img-presents:nth-last-child(2) {
+        opacity: 0.4;
+    }
+
+    .img-presents:nth-last-child(3) {
+        opacity: 0.7;
+    }
+
+    .img-box {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .shadow {
+        position: absolute;
+        z-index: 99;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-image:
+            radial-gradient(at 50% 100%, hsla(240, 0%, 0%, 1) 0px, transparent 35%),
+            radial-gradient(at 25% 100%, hsla(240, 0%, 0%, 1) 0px, transparent 35%),
+            radial-gradient(at 0% 100%, hsla(240, 0%, 0%, 1) 0px, transparent 35%),
+            radial-gradient(at 75% 100%, hsla(240, 0%, 0%, 1) 0px, transparent 35%),
+            radial-gradient(at 100% 100%, hsla(240, 0%, 0%, 1) 0px, transparent 35%);
+    }
+
+    .link-presents {
+        text-decoration: none;
+        position: absolute;
+        bottom: 0;
+        z-index: 9999;
+        padding: 15px 25px;
+        background-color: $light-green;
+        text-transform: uppercase;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.3s all;
+
+        &:hover {
+            background-color: $dark-green;
+        }
+    }
+
+}
+
+
+//footer
+footer {
+
+      background-color: $red-hover;
+
+    ul {
+        list-style: none;
+        font-weight: bold;
+
+        li:first-child{
+            font-size: 1.3rem;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+// text color class
+
+.color-red {
+    color: $red;
+}
+
+.white {
+    color: $worm-white;
+}
