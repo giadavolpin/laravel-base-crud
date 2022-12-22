@@ -1,3 +1,10 @@
+<?php 
+$behaviour = '';
+if(isset($_GET['filter'])){
+    $behaviour = $_GET['filter'];
+}
+?>
+
 @extends('layouts.app')
 
 @section('content')
@@ -11,11 +18,14 @@
             </div>
             @endif
         </div>
-        <select name="" id="">
-            <option value="" selected>Tutti</option>
-            <option value="buono">Buoni</option>
-            <option value="cattivo">Cattivi</option>
-        </select>
+        <form action="{{route('presents.index')}}" method="GET">
+            <select name="filter" id="filter">
+                <option value="" {{($behaviour == '') ? 'selected' : ''}}>Tutti</option>
+                <option value="buono" {{($behaviour == 'buono') ? 'selected' : ''}}>Buoni</option>
+                <option value="cattivo" {{($behaviour == 'cattivo') ? 'selected' : ''}}>Cattivi</option>
+            </select>
+            <button type="submit" class="btn btn-danger ms-3">Cerca</button>
+        </form>
         <div class="row">
             @foreach ($presents as $present)
             <div class="col-2">

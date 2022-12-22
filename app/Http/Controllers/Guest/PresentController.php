@@ -14,9 +14,14 @@ class PresentController extends Controller
      *
      * 
      */
-    public function index()
+    public function index(Request $request)
     {
+        if(!empty($request->query('filter'))){
+            $behaviour = $request->query('filter');
+            $presents = Present::where('good_or_evil', $behaviour)->get();
+        } else {
         $presents = Present::all();
+        }
         return view('presents.index',compact('presents'));
     }
 
