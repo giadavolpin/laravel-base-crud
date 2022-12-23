@@ -81,8 +81,16 @@ class PresentController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $present = Present::find($id);
         $formData = $this->validation($request->all());
-        
+        $present->name = $formData['name'];
+        $present->surname = $formData['surname'];
+        $present->present = $formData['present'];
+        $present->address = $formData['address'];
+        $present->good_or_evil = $formData['good_or_evil'];
+        $present->id_elf = $formData['id_elf'];
+        $present->update();
+        return view('presents.show', compact('present'));
     }
 
     /**

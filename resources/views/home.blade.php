@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
-@include('partials.jumbo')
-    <section class="container main-home mt-4 mb-5 ">
+@include('partials.carousel')
+    {{-- <section class="container main-home mt-4 mb-5 ">
         <h1 class="display-2 fw-bold text-center">Toy Factory</h1>
         <div class="box-presents">
             <h5 class="display-6 fw-bold">Presents</h5>
@@ -15,7 +15,7 @@
                 </a>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- proposta stefania  -->
     <!-- <section id="welcome">
         <h1>

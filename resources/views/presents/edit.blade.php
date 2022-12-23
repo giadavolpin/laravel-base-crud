@@ -2,7 +2,8 @@
 
 @section('content')
     <section class="container my-5">
-        <form action="{{ route('presents.store') }}" method="POST" class="my-form">
+        <form action="{{ route('presents.update', $present->id) }}" method="POST" class="my-form">
+        @method('PUT')
         @csrf
             <h1 class="text-center fs-1">Aggiungi un Regalo</h1>
             <div>

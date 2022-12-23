@@ -22,8 +22,10 @@ $image_carbon = config('imagePresents.carbon_image');
                         <img src="{{$image[$index]}}" alt="image present">
                         @endif
                     </div>
-                    <a href="{{route('presents.edit', $present->id)}}">Modifica</a>
-                    <button class="delete bg-danger myBtn"><i class="fa-solid fa-trash"></i></button>
+                    <div class="btn-box mt-4">
+                        <a href="{{route('presents.edit', $present->id)}}" id="btn-submit" class="my-btn">Modifica</a>
+                        <a class="delete myBtn"><i class="fa-solid fa-trash"></i></a>
+                    </div>
                 </div>
                 <div class="details">
                     <div class="s-box">
@@ -58,11 +60,12 @@ $image_carbon = config('imagePresents.carbon_image');
                 <div class="modal myModal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
-                        <form action="{{route('presents.destroy', $present->id)}}" method="POST">
+                        <form action="{{route('presents.destroy', $present->id)}}" method="POST" class="text-center">
                             @csrf
                             @method('DELETE')
                             <span>Sei sicuro di elimiare il regalo per {{$present->name}}?</span> 
-                            <button  type="submit">Si</button>
+                            <button  type="submit" class="my-btn" id="btn-submit">Si</button>
+                            <span class="my-btn no" id="btn-close">No</span>
                         </form>
                     </div>
                 </div>

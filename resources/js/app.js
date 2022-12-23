@@ -10,6 +10,8 @@ let btnCollection = document.getElementsByClassName("myBtn");
 
 let spanColllection = document.getElementsByClassName("close");
 
+let btn_close = document.getElementById("btn-close")
+
 for(let i=0; i<btnCollection.length; i++){
 
     btnCollection[i].onclick = function(e) {
@@ -23,8 +25,9 @@ for(let i=0; i<btnCollection.length; i++){
 }
 
 window.onclick = function(event) {
+
     for(let i=0; i<modalCollection.length; i++){
-        if (event.target == modalCollection[i]) {
+        if (event.target == modalCollection[i] || event.target == btn_close) {
             modalCollection[i].style.display = "none";
         }
     }
