@@ -69,7 +69,7 @@ const app = createApp({
             clearInterval(this.interval)
         },
         start(){
-            this.interval = setInterval(()=> this.scrollRight(), 2500)
+            this.interval = setInterval(()=> this.scrollRight(), 3500)
         }
     },
     mounted(){
