@@ -2,6 +2,7 @@
 
 @section('content')
     <section class="container my-5">
+        <a href="{{route('presents.index')}}" class="indietro"><i class="fa-solid fa-circle-left"></i> Torna indietro</a>
         <form action="{{ route('presents.store') }}" method="POST" class="my-form">
         @csrf
             <h1 class="text-center fs-1">Aggiungi un Regalo</h1>
@@ -14,7 +15,7 @@
             </div>
             <div>
                 <label for="surname">Cognome</label>
-                <input type="text" class="form-controll @error('surname') is-invalid @enderror" name="surname" id="surname" placeholder="Rossi" required minlength="5" maxlength="50">
+                <input type="text" class="form-controll @error('surname') is-invalid @enderror" name="surname" id="surname" placeholder="Rossi"  minlength="5" maxlength="50">
                 @error('surname')
                     <div class="invalid-feedback">{{$message}}</div>
                 @enderror

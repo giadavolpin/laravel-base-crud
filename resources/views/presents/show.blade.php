@@ -41,7 +41,7 @@ $image_carbon = config('imagePresents.carbon_image');
                             </div>
                             <div class="address name s-d-flex separation-line">
                                 <span class="index">Indirizzo:</span>
-                                <span class="data">{{Str::limit($present->address, 25)}}</span>
+                                <span class="data">{{Str::limit($present->address, 50)}}</span>
                             </div>
                             <div class="naughty name s-d-flex separation-line">
                                 <span class="index">Comportamento:</span>
@@ -63,9 +63,11 @@ $image_carbon = config('imagePresents.carbon_image');
                         <form action="{{route('presents.destroy', $present->id)}}" method="POST" class="text-center">
                             @csrf
                             @method('DELETE')
-                            <span>Sei sicuro di elimiare il regalo per {{$present->name}}?</span> 
-                            <button  type="submit" class="my-btn" id="btn-submit">Si</button>
-                            <span class="my-btn no" id="btn-close">No</span>
+                            <p>Sei sicuro di elimiare il regalo per {{$present->name}}?</p> 
+                            <div class="mt-4">
+                                <button  type="submit" class="my-btn" id="btn-submit">Si</button>
+                                <span class="my-btn no" id="btn-close">No</span>
+                            </div>
                         </form>
                     </div>
                 </div>

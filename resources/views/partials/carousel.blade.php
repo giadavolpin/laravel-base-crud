@@ -8,7 +8,7 @@
                         <h1>Toy Factory</h1>
                         {{-- <p>new collection from newyork</p> --}}
                         <div class="mt-4">
-                            <a href="{{route('presents.index')}}" id="btn-submit" class="transp-btn-jumbo my-btn">Go to presents</a>
+                            <a href="{{route('presents.index')}}" id="btn-submit" class="transp-btn-jumbo my-btn">vai al catalogo</a>
                             {{-- <button class="transp-btn-jumbo">lookbook</button> --}}
                         </div>
                     </div>

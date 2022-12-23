@@ -2,20 +2,21 @@
 
 @section('content')
     <section class="container my-5">
+        <a href="{{route('presents.show', $present->id)}}" class="indietro"><i class="fa-solid fa-circle-left"></i> Torna indietro</a>
         <form action="{{ route('presents.update', $present->id) }}" method="POST" class="my-form">
         @method('PUT')
         @csrf
             <h1 class="text-center fs-1">Aggiungi un Regalo</h1>
             <div>
                 <label for="name">Nome</label>
-                <input type="text" class="form-controll @error('name') is-invalid @enderror" name="name" id="name" placeholder="Mario" value="{{old('name', $present->name)}}"  maxlength="50">
+                <input type="text" class="form-controll @error('name') is-invalid @enderror" name="name" id="name" placeholder="Mario" value="{{old('name', $present->name)}}" required  maxlength="50">
                 @error('name')
                     <div class="invalid-feedback">{{$message}}</div>
                 @enderror
             </div>
             <div>
                 <label for="surname">Cognome</label>
-                <input type="text" class="form-controll @error('surname') is-invalid @enderror" name="surname" id="surname" placeholder="Rossi" value="{{old('surname', $present->surname)}}" required minlength="5" maxlength="50">
+                <input type="text" class="form-controll @error('surname') is-invalid @enderror" name="surname" id="surname" placeholder="Rossi" value="{{old('surname', $present->surname)}}"  minlength="5" maxlength="50">
                 @error('surname')
                     <div class="invalid-feedback">{{$message}}</div>
                 @enderror
